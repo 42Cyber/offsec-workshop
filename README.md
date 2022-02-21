@@ -43,7 +43,7 @@ RUN apt-get update --allow-insecure-repositories && \
         dirsearch \
         tcpdump \
         zip \
-        curl
+        curl make lib32readline-dev
 RUN mkdir /offsec
 WORKDIR /offsec
 EOF
