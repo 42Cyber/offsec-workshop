@@ -42,7 +42,10 @@ RUN apt-get update --allow-insecure-repositories && \
         nmap \
         dirsearch \
         tcpdump \
-        zip
+        zip \
+        curl
+RUN mkdir /offsec
+WORKDIR /offsec
 EOF
 ```
 
@@ -56,7 +59,7 @@ Construimos la imagen y la ejecutamos, enlazando la carpeta actual como un volum
 docker build -t offsec .
 docker run \
     -it \
-    --mount type=bind,source="$(pwd)",target=/root/offsec \
+    --mount type=bind,source="$(pwd)",target=/offsec \
     offsec
 ```
 <hr>
