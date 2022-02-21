@@ -11,6 +11,8 @@ services:
             - MYSQL_DATABASE=wordpress
             - MYSQL_USER=manager
             - MYSQL_PASSWORD=secret
+        ports:
+            - 3306:3306
     adminer:
         image: adminer
         ports:
