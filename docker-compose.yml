@@ -29,6 +29,5 @@ services:
             - WORDPRESS_DB_HOST=db
         ports:
             - 80:80
-
 volumes:
     data:
